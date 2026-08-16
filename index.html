@@ -3,14 +3,42 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1>Blackjack</h1>
-        <p id="message-el">Want to play a round?</p>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
-        <!-- 1. Create a paragraph with an id of "player-el" -->
-        <p id="player-el"></p>
+        <div>
+            <p>Casino Table</p>
+            <h1>Blackjack</h1>
+            <p>Build your hand, watch the dealer, and try to get to $100.</p>
+        </div>
+
+        <div>
+            <div>
+                <input type="text" id="name-el" placeholder="Enter your name">
+                <button onclick="setPlayerName()">Set Name</button>
+            </div>
+
+            <p id="message-el">Want to play a round?</p>
+
+            <div>
+                <div>
+                    <p>Your Hand</p>
+                    <p id="cards-el">Cards:</p>
+                    <p id="sum-el">Sum:</p>
+                </div>
+
+                <div>
+                    <p>Dealer</p>
+                    <p id="dealer-el">Dealer:</p>
+                    <p id="dealer-sum-el">Dealer Sum:</p>
+                </div>
+            </div>
+
+            <div>
+                <button id="start-btn" onclick="startGame()">START GAME</button>
+                <button onclick="newCard()">NEW CARD</button>
+                <button onclick="stand()">STAND</button>
+            </div>
+
+            <p id="player-el"></p>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
